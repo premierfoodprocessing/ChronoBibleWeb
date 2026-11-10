@@ -122,7 +122,7 @@ a:hover { color: var(--ink); }
 
 /* Timeline section */
 .timeline-section { padding: 56px 0 32px; }
-.timeline-intro { margin-bottom: 20px; }
+.timeline-intro { max-width: 760px; margin-inline: auto; margin-bottom: 20px; text-align: left; }
 .timeline-intro h2 {
   margin: 0 0 10px; font-family: var(--serif); font-size: 2rem; color: #1f1711; letter-spacing: 0.02em;
 }
