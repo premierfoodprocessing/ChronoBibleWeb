@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Download ChronoBible for Android — a chronological Bible reading plan, 4 chapters a day over 338 days, designed for offline reading." />
+  <title>Download ChronoBible for Android</title>
+  <style>
+    :root {
+      --parchment: #f4ead8;
+      --ivory: #fbf6eb;
+      --paper: #f8f0e1;
+      --ink: #2b2118;
+      --ink-soft: #4a3b2d;
+      --muted: #695744;
+      --border: rgba(90, 62, 34, 0.22);
+      --border-strong: rgba(90, 62, 34, 0.38);
+      --deep-brown: #3a2b1e;
+      --bronze: #8a6724;
+      --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+      --sans: "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; color: var(--ink); font-family: var(--sans); line-height: 1.6;
+      background-color: var(--parchment);
+      background-image: radial-gradient(ellipse at top, rgba(251,246,235,0.92), rgba(244,234,216,0.97) 55%, rgba(234,220,195,0.98));
+    }
+    a { color: #5b4420; }
+    a:hover { color: var(--ink); }
+    :focus-visible { outline: 3px solid rgba(47,95,90,0.45); outline-offset: 2px; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 20px 20px 32px; }
+    header {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      padding: 8px 0 18px; border-bottom: 1px solid rgba(90,62,34,0.28);
+    }
+    .brand { font-family: var(--serif); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.08em; color: var(--deep-brown); text-decoration: none; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+    nav a { color: var(--ink-soft); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+    nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+    main { padding-top: 18px; }
+    h1, h2 { font-family: var(--serif); color: #1f1711; }
+    h1 { font-size: clamp(1.9rem, 4vw, 2.5rem); line-height: 1.1; margin: 0 0 10px; }
+    .lead { margin: 0 0 10px; font-size: 1.08rem; color: var(--ink-soft); max-width: 70ch; }
+    .meta { margin: 0 0 18px; color: var(--muted); font-size: 0.98rem; }
+    .meta strong { color: var(--ink); }
+    .card {
+      background: rgba(251,246,235,0.88); border: 1px solid var(--border-strong); border-radius: 12px;
+      padding: 20px 22px; margin: 16px 0; box-shadow: 0 6px 18px rgba(43,33,24,0.05);
+    }
+    .download-card { text-align: left; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 52px; padding: 0 28px; border-radius: 8px; font-weight: 700; font-size: 1.02rem;
+      text-decoration: none; border: 1px solid #241b13; background: var(--deep-brown); color: var(--ivory);
+      letter-spacing: 0.02em;
+    }
+    .btn:hover { background: #241b13; color: #fff; }
+    .btn-note { margin: 10px 0 0; color: var(--muted); font-size: 0.93rem; }
+    .offline-note { margin: 12px 0 0; color: var(--ink-soft); }
+    h2 { font-size: 1.3rem; margin: 0 0 10px; }
+    ol { margin: 8px 0 0 1.25rem; padding: 0; }
+    li { margin: 8px 0; }
+    .tech-details {
+      border: 1px solid var(--border-strong); border-radius: 12px; background: rgba(251,246,235,0.7);
+      margin: 16px 0; overflow: hidden;
+    }
+    .tech-details summary {
+      cursor: pointer; padding: 14px 18px; font-family: var(--serif); font-size: 1.1rem; font-weight: 700;
+      color: #1f1711; list-style: none; display: flex; align-items: center; gap: 10px;
+    }
+    .tech-details summary::-webkit-details-marker { display: none; }
+    .tech-details summary::before {
+      content: "▸"; color: var(--bronze); font-size: 0.95rem; transition: transform 0.15s ease; display: inline-block;
+    }
+    .tech-details[open] summary::before { transform: rotate(90deg); }
+    .tech-details summary:hover { background: rgba(251,246,235,0.9); }
+    .tech-body { padding: 0 18px 16px; border-top: 1px solid var(--border); }
+    .tech-intro { margin: 12px 0 10px; color: var(--muted); font-size: 0.93rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:last-child th, tr:last-child td { border-bottom: 0; }
+    th { color: var(--muted); font-weight: 700; width: 36%; }
+    code { word-break: break-all; background: rgba(90,62,34,0.08); padding: 2px 6px; border-radius: 5px; font-size: 0.92em; }
+    footer { margin: 26px 0 4px; padding-top: 16px; border-top: 1px solid rgba(90,62,34,0.22); color: var(--muted); font-size: 0.92rem; }
+    footer a { color: var(--ink-soft); font-weight: 600; text-decoration: none; margin-right: 14px; }
+    footer a:hover { color: var(--ink); text-decoration: underline; }
+    @media (max-width: 640px) {
+      .wrap { padding: 16px 16px 28px; }
+      th, td { display: block; width: 100%; padding: 6px 4px; }
+      th { padding-top: 10px; border-bottom: 0; }
+      td { padding-bottom: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="../">CHRONOBIBLE</a>
+      <nav aria-label="Main">
+        <a href="../">Home</a>
+        <a href="../#timeline">Timeline</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>ChronoBible for Android</h1>
+      <p class="lead">Read the Bible as one unfolding story in historical order — four chapters a day over 338 days, from Genesis to Revelation.</p>
+      <p class="meta"><strong>Version 1.1.0</strong> · Android APK · <strong>6.28 MB</strong> (6,584,401 bytes)</p>
+
+      <div class="card download-card">
+        <p><a class="btn" href="./chronobible-1.1.0.apk" download="chronobible-1.1.0.apk">Download APK</a></p>
+        <p class="btn-note">Direct download: <a href="./chronobible-1.1.0.apk" download="chronobible-1.1.0.apk">chronobible-1.1.0.apk</a></p>
+        <p class="offline-note">ChronoBible is designed for offline reading. No account or backend is required; your reading progress stays on your device.</p>
+      </div>
+
+      <div class="card" aria-labelledby="install">
+        <h2 id="install">Installation instructions</h2>
+        <ol>
+          <li>Tap <strong>Download APK</strong> above to download <strong>chronobible-1.1.0.apk</strong> to your Android device.</li>
+          <li>Open the downloaded file from your browser or file manager.</li>
+          <li>If prompted, allow installation from this source (<em>Install unknown apps</em>). Install apps only from sources you trust.</li>
+          <li>Tap <strong>Install</strong>. If ChronoBible is already installed, Android may update it in place.</li>
+          <li>Open ChronoBible and begin your reading journey.</li>
+        </ol>
+        <p class="btn-note">Optional: after downloading, you can verify the file using the checksum in <strong>Technical Release Details</strong> below.</p>
+      </div>
+
+      <details class="tech-details">
+        <summary>Technical Release Details</summary>
+        <div class="tech-body">
+          <p class="tech-intro">Verification information for the distributed Android release. These details help confirm you have the authentic APK.</p>
+          <table>
+            <tbody>
+              <tr><th scope="row">Application package ID</th><td><code>com.cronobible.app</code></td></tr>
+              <tr><th scope="row">Version code</th><td><code>10100</code></td></tr>
+              <tr><th scope="row">APK filename</th><td><code>chronobible-1.1.0.apk</code></td></tr>
+              <tr><th scope="row">APK SHA-256 checksum</th><td><code>cccd95102b7b0f01084e1926a77451532cd455dd777e5a9d3fc90da7636328ce</code></td></tr>
+              <tr><th scope="row">Signing certificate SHA-256 fingerprint</th><td><code>c8f0f7ae7191dd17a9d6a763c7ff557d546d5dbac4b1d4ab2f63f487d19b1916</code></td></tr>
+              <tr><th scope="row">GitHub releases reference</th><td><a href="https://github.com/premierfoodprocessing/ChronoBible/releases">github.com/premierfoodprocessing/ChronoBible/releases</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </main>
+
+    <footer>
+      <a href="../">Home</a>
+      <a href="../#timeline">Timeline</a>
+      <a href="https://github.com/premierfoodprocessing/ChronoBible">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>

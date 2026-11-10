@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ChronoBible — The Illustrated Biblical Historical Atlas. Discover the story of Scripture across the centuries in historical context." />
+  <title>ChronoBible — The Illustrated Biblical Historical Atlas</title>
+  <link rel="stylesheet" href="./atlas.css" />
+</head>
+<body>
+  <a class="skip-link" href="#timeline">Skip to the biblical timeline</a>
+
+  <header class="site-header" id="top">
+    <div class="masthead">
+      <a class="brand" href="./" aria-label="ChronoBible home">CHRONOBIBLE</a>
+      <a class="story-mark" href="#timeline">THE BIBLICAL STORY</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="#about">ABOUT</a>
+        <a href="./download/">DOWNLOAD ANDROID</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <p class="eyebrow">The Illustrated Biblical Historical Atlas</p>
+        <h1 id="hero-title">THE BIBLE, IN ITS HISTORICAL CONTEXT</h1>
+        <p class="hero-subhead">Discover the story of Scripture across the centuries.</p>
+        <p class="hero-lede">The Bible is one unfolding story, taking place across real historical periods. Journey from Creation to the Early Church through ten illustrated eras, with Scripture groupings presented in their historical setting.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#timeline">EXPLORE THE BIBLICAL TIMELINE</a>
+          <a class="btn btn-secondary" href="./download/">Download Android</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="timeline-section" aria-labelledby="timeline-title">
+      <div class="section-inner">
+        <div class="timeline-intro">
+          <p class="section-kicker">Chronological atlas</p>
+          <h2 id="timeline-title">A JOURNEY THROUGH BIBLICAL HISTORY</h2>
+          <p class="section-lede">Ten historical periods, one continuous chronological story. Scripture groupings appear above each period, and dates, titles, and descriptions appear below the timeline. Select a period to explore its complete Scripture information.</p>
+          <p class="approx-note"><strong>Approximate historical periods</strong> — guides for reading in historical order, not assertions of exact composition or event dates.</p>
+          <p class="scroll-hint" id="scroll-hint" aria-hidden="true">Scroll horizontally to follow the continuous journey</p>
+        </div>
+
+        <div class="atlas-frame" id="atlas-frame">
+          <div class="atlas-viewport" id="atlas-viewport" tabindex="0" aria-label="Historical timeline: scroll horizontally to explore ten periods from Creation and Patriarchs to the Early Church and Epistles">
+            <div class="atlas-track" id="atlas-track" role="list" aria-label="Ten periods of biblical history"></div>
+          </div>
+        </div>
+
+        <div class="detail-panel" id="detail-panel" aria-labelledby="detail-title">
+          <div class="detail-inner" id="detail-inner">
+            <p class="detail-empty">Select a period on the timeline to view its complete Scripture groupings, additional writings, and historical context.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section" aria-labelledby="about-title">
+      <div class="section-inner narrow">
+        <p class="section-kicker">About ChronoBible</p>
+        <h2 id="about-title">One connected story, read in historical order</h2>
+        <p>ChronoBible presents Scripture as a chronological journey through the historical settings in which the biblical story unfolds. The ten periods on this atlas gather books and writings by historical era so readers can follow the movement of the story from Creation and the Patriarchs to the life of the early Church.</p>
+        <p>The ChronoBible reading experience offers <strong>four chapters a day</strong> over <strong>338 days</strong>, following the historical flow of events from Genesis to Revelation, including additional writings where indicated. ChronoBible is designed for offline reading: reading progress in the application stays on your device.</p>
+        <p class="approx-note">Period dates and groupings are presented as approximate historical guides in keeping with the established ChronoBible chronology.</p>
+      </div>
+    </section>
+
+    <section class="closing-section" aria-labelledby="closing-title">
+      <div class="section-inner narrow closing-inner">
+        <h2 id="closing-title">EXPERIENCE THE BIBLE CHRONOLOGICALLY</h2>
+        <p class="closing-subhead">Four chapters a day. One connected story.</p>
+        <div class="closing-actions">
+          <a class="btn btn-primary" href="./download/">BEGIN YOUR READING JOURNEY</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav aria-label="Footer">
+        <a href="#timeline">Timeline</a>
+        <a href="#about">About</a>
+        <a href="./download/">Download Android</a>
+        <a href="https://github.com/premierfoodprocessing/ChronoBible">GitHub</a>
+      </nav>
+      <p>ChronoBible — The Illustrated Biblical Historical Atlas. Approximate historical periods presented as guides for reading in order.</p>
+    </div>
+  </footer>
+
+  <script src="./timeline-data.js"></script>
+  <script src="./atlas.js"></script>
+</body>
+</html>
