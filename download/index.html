@@ -49,10 +49,10 @@
       padding: 20px 22px; margin: 16px 0; box-shadow: 0 6px 18px rgba(43,33,24,0.05);
     }
     .download-card { text-align: left; }
-    .test-candidate { border-color: rgba(138,103,36,0.55); box-shadow: 0 8px 22px rgba(138,103,36,0.10); }
+    .current-release { border-color: rgba(58,43,30,0.38); }
     .badge {
       display: inline-block; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.02em;
-      color: #5b4420; background: rgba(138,103,36,0.14); border: 1px solid rgba(138,103,36,0.35);
+      color: #2f4a3a; background: rgba(47,74,58,0.12); border: 1px solid rgba(47,74,58,0.28);
       border-radius: 999px; padding: 4px 10px; margin: 0 0 10px;
     }
     .btn {
@@ -120,19 +120,18 @@
       <p class="lead">Read the Bible as one unfolding story in historical order — four chapters a day over 338 days, from Genesis to Revelation.</p>
       <p class="offline-note">ChronoBible is designed for offline reading. No account or backend is required; your reading progress stays on your device.</p>
 
-      <div class="card download-card test-candidate" aria-labelledby="test-candidate-title">
-        <p class="badge">Test candidate — awaiting device verification</p>
-        <h2 id="test-candidate-title">Version 1.2.0 (test candidate)</h2>
-        <p class="meta"><strong>Version 1.2.0</strong> · Version code <strong>10200</strong> · Android APK · <strong>6.32 MB</strong> (6,629,520 bytes)</p>
-        <p class="section-note">Published for Captain&rsquo;s Redmi device testing. Android runtime, offline operation, and Read Aloud behaviour have not been device-tested and await verification.</p>
-        <p><a class="btn" href="./chronobible-1.2.0.apk" download="chronobible-1.2.0.apk">Download v1.2.0 APK (test candidate)</a></p>
+      <div class="card download-card current-release" aria-labelledby="current-release-title">
+        <p class="badge">Current stable release</p>
+        <h2 id="current-release-title">Version 1.2.0 (current release)</h2>
+        <p class="meta"><strong>Version 1.2.0</strong> · Version code <strong>10200</strong> · Package <strong>com.cronobible.app</strong> · Android APK · <strong>6.32 MB</strong> (6,629,520 bytes)</p>
+        <p><a class="btn" href="./chronobible-1.2.0.apk" download="chronobible-1.2.0.apk">Download ChronoBible v1.2.0 APK</a></p>
         <p class="btn-note">Direct download: <a href="./chronobible-1.2.0.apk" download="chronobible-1.2.0.apk">chronobible-1.2.0.apk</a></p>
       </div>
 
       <details class="tech-details" open>
-        <summary>Technical Release Details — Version 1.2.0 (test candidate)</summary>
+        <summary>Technical Release Details — Version 1.2.0</summary>
         <div class="tech-body">
-          <p class="tech-intro">Verification information for the v1.2.0 test candidate APK.</p>
+          <p class="tech-intro">Verification information for the v1.2.0 Android release.</p>
           <table>
             <tbody>
               <tr><th scope="row">Application package ID</th><td><code>com.cronobible.app</code></td></tr>
@@ -142,35 +141,36 @@
               <tr><th scope="row">File size</th><td>6,629,520 bytes (6.32 MB)</td></tr>
               <tr><th scope="row">APK SHA-256 checksum</th><td><code>b22c8e4b4c65fea1289e551065572d736412dee27895f7ffdbecfdb20ef1c92d</code></td></tr>
               <tr><th scope="row">Signing certificate SHA-256 fingerprint</th><td><code>c8f0f7ae7191dd17a9d6a763c7ff557d546d5dbac4b1d4ab2f63f487d19b1916</code></td></tr>
-              <tr><th scope="row">Status</th><td>Test candidate — awaiting device verification</td></tr>
+              <tr><th scope="row">GitHub releases reference</th><td><a href="https://github.com/premierfoodprocessing/ChronoBible/releases">github.com/premierfoodprocessing/ChronoBible/releases</a></td></tr>
+              <tr><th scope="row">Known limitation</th><td>Read Aloud is available. Voice quality and behaviour may vary depending on the Android WebView/device speech engine and available voices; further refinement may be considered in a subsequent release.</td></tr>
             </tbody>
           </table>
         </div>
       </details>
 
       <div class="card" aria-labelledby="install">
-        <h2 id="install">Installation instructions</h2>
+        <h2 id="install">Installation instructions (v1.2.0)</h2>
         <ol>
-          <li>Tap <strong>Download v1.2.0 APK (test candidate)</strong> above to download <strong>chronobible-1.2.0.apk</strong> to your Android device (or download version 1.1.0 below).</li>
+          <li>Tap <strong>Download ChronoBible v1.2.0 APK</strong> above to download <strong>chronobible-1.2.0.apk</strong> to your Android device.</li>
           <li>Open the downloaded file from your browser or file manager.</li>
           <li>If prompted, allow installation from this source (<em>Install unknown apps</em>). Install apps only from sources you trust.</li>
-          <li>Tap <strong>Install</strong>. If ChronoBible is already installed, Android may update it in place.</li>
+          <li>Tap <strong>Install</strong>. If ChronoBible 1.1.0 is already installed, Android may update it in place.</li>
           <li>Open ChronoBible and begin your reading journey.</li>
         </ol>
         <p class="btn-note">Optional: after downloading, verify the file using the SHA-256 checksum shown in the Technical Release Details.</p>
       </div>
 
       <div class="card download-card" aria-labelledby="v110-title">
-        <h2 id="v110-title">Version 1.1.0 (existing release)</h2>
+        <h2 id="v110-title">Version 1.1.0 (previous release)</h2>
         <p class="meta"><strong>Version 1.1.0</strong> · Version code <strong>10100</strong> · Android APK · <strong>6.28 MB</strong> (6,584,401 bytes)</p>
-        <p><a class="btn btn-secondary" href="./chronobible-1.1.0.apk" download="chronobible-1.1.0.apk">Download v1.1.0 APK</a></p>
+        <p><a class="btn btn-secondary" href="./chronobible-1.1.0.apk" download="chronobible-1.1.0.apk">Download v1.1.0 APK (previous)</a></p>
         <p class="btn-note">Direct download: <a href="./chronobible-1.1.0.apk" download="chronobible-1.1.0.apk">chronobible-1.1.0.apk</a></p>
       </div>
 
       <details class="tech-details">
-        <summary>Technical Release Details — Version 1.1.0</summary>
+        <summary>Technical Release Details — Version 1.1.0 (previous)</summary>
         <div class="tech-body">
-          <p class="tech-intro">Verification information for the existing v1.1.0 Android release.</p>
+          <p class="tech-intro">Verification information for the previous v1.1.0 Android release.</p>
           <table>
             <tbody>
               <tr><th scope="row">Application package ID</th><td><code>com.cronobible.app</code></td></tr>
@@ -180,7 +180,6 @@
               <tr><th scope="row">File size</th><td>6,584,401 bytes (6.28 MB)</td></tr>
               <tr><th scope="row">APK SHA-256 checksum</th><td><code>cccd95102b7b0f01084e1926a77451532cd455dd777e5a9d3fc90da7636328ce</code></td></tr>
               <tr><th scope="row">Signing certificate SHA-256 fingerprint</th><td><code>c8f0f7ae7191dd17a9d6a763c7ff557d546d5dbac4b1d4ab2f63f487d19b1916</code></td></tr>
-              <tr><th scope="row">GitHub releases reference</th><td><a href="https://github.com/premierfoodprocessing/ChronoBible/releases">github.com/premierfoodprocessing/ChronoBible/releases</a></td></tr>
             </tbody>
           </table>
         </div>
