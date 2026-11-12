@@ -39,16 +39,22 @@
     nav a { color: var(--ink-soft); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
     nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
     main { padding-top: 18px; }
-    h1, h2 { font-family: var(--serif); color: #1f1711; }
+    h1, h2, h3 { font-family: var(--serif); color: #1f1711; }
     h1 { font-size: clamp(1.9rem, 4vw, 2.5rem); line-height: 1.1; margin: 0 0 10px; }
     .lead { margin: 0 0 10px; font-size: 1.08rem; color: var(--ink-soft); max-width: 70ch; }
-    .meta { margin: 0 0 18px; color: var(--muted); font-size: 0.98rem; }
+    .meta { margin: 0 0 12px; color: var(--muted); font-size: 0.98rem; }
     .meta strong { color: var(--ink); }
     .card {
       background: rgba(251,246,235,0.88); border: 1px solid var(--border-strong); border-radius: 12px;
       padding: 20px 22px; margin: 16px 0; box-shadow: 0 6px 18px rgba(43,33,24,0.05);
     }
     .download-card { text-align: left; }
+    .test-candidate { border-color: rgba(138,103,36,0.55); box-shadow: 0 8px 22px rgba(138,103,36,0.10); }
+    .badge {
+      display: inline-block; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.02em;
+      color: #5b4420; background: rgba(138,103,36,0.14); border: 1px solid rgba(138,103,36,0.35);
+      border-radius: 999px; padding: 4px 10px; margin: 0 0 10px;
+    }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
       min-height: 52px; padding: 0 28px; border-radius: 8px; font-weight: 700; font-size: 1.02rem;
@@ -56,9 +62,14 @@
       letter-spacing: 0.02em;
     }
     .btn:hover { background: #241b13; color: #fff; }
+    .btn-secondary {
+      background: transparent; color: var(--deep-brown); border-color: var(--border-strong);
+    }
+    .btn-secondary:hover { background: rgba(58,43,30,0.06); color: var(--ink); }
     .btn-note { margin: 10px 0 0; color: var(--muted); font-size: 0.93rem; }
     .offline-note { margin: 12px 0 0; color: var(--ink-soft); }
     h2 { font-size: 1.3rem; margin: 0 0 10px; }
+    h3 { font-size: 1.12rem; margin: 0 0 8px; }
     ol { margin: 8px 0 0 1.25rem; padding: 0; }
     li { margin: 8px 0; }
     .tech-details {
@@ -82,6 +93,7 @@
     tr:last-child th, tr:last-child td { border-bottom: 0; }
     th { color: var(--muted); font-weight: 700; width: 36%; }
     code { word-break: break-all; background: rgba(90,62,34,0.08); padding: 2px 6px; border-radius: 5px; font-size: 0.92em; }
+    .section-note { margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; }
     footer { margin: 26px 0 4px; padding-top: 16px; border-top: 1px solid rgba(90,62,34,0.22); color: var(--muted); font-size: 0.92rem; }
     footer a { color: var(--ink-soft); font-weight: 600; text-decoration: none; margin-right: 14px; }
     footer a:hover { color: var(--ink); text-decoration: underline; }
@@ -106,35 +118,66 @@
     <main>
       <h1>ChronoBible for Android</h1>
       <p class="lead">Read the Bible as one unfolding story in historical order — four chapters a day over 338 days, from Genesis to Revelation.</p>
-      <p class="meta"><strong>Version 1.1.0</strong> · Android APK · <strong>6.28 MB</strong> (6,584,401 bytes)</p>
+      <p class="offline-note">ChronoBible is designed for offline reading. No account or backend is required; your reading progress stays on your device.</p>
 
-      <div class="card download-card">
-        <p><a class="btn" href="./chronobible-1.1.0.apk" download="chronobible-1.1.0.apk">Download APK</a></p>
-        <p class="btn-note">Direct download: <a href="./chronobible-1.1.0.apk" download="chronobible-1.1.0.apk">chronobible-1.1.0.apk</a></p>
-        <p class="offline-note">ChronoBible is designed for offline reading. No account or backend is required; your reading progress stays on your device.</p>
+      <div class="card download-card test-candidate" aria-labelledby="test-candidate-title">
+        <p class="badge">Test candidate — awaiting device verification</p>
+        <h2 id="test-candidate-title">Version 1.2.0 (test candidate)</h2>
+        <p class="meta"><strong>Version 1.2.0</strong> · Version code <strong>10200</strong> · Android APK · <strong>6.32 MB</strong> (6,629,520 bytes)</p>
+        <p class="section-note">Published for Captain&rsquo;s Redmi device testing. Android runtime, offline operation, and Read Aloud behaviour have not been device-tested and await verification.</p>
+        <p><a class="btn" href="./chronobible-1.2.0.apk" download="chronobible-1.2.0.apk">Download v1.2.0 APK (test candidate)</a></p>
+        <p class="btn-note">Direct download: <a href="./chronobible-1.2.0.apk" download="chronobible-1.2.0.apk">chronobible-1.2.0.apk</a></p>
       </div>
+
+      <details class="tech-details" open>
+        <summary>Technical Release Details — Version 1.2.0 (test candidate)</summary>
+        <div class="tech-body">
+          <p class="tech-intro">Verification information for the v1.2.0 test candidate APK.</p>
+          <table>
+            <tbody>
+              <tr><th scope="row">Application package ID</th><td><code>com.cronobible.app</code></td></tr>
+              <tr><th scope="row">Version</th><td><code>1.2.0</code></td></tr>
+              <tr><th scope="row">Version code</th><td><code>10200</code></td></tr>
+              <tr><th scope="row">APK filename</th><td><code>chronobible-1.2.0.apk</code></td></tr>
+              <tr><th scope="row">File size</th><td>6,629,520 bytes (6.32 MB)</td></tr>
+              <tr><th scope="row">APK SHA-256 checksum</th><td><code>b22c8e4b4c65fea1289e551065572d736412dee27895f7ffdbecfdb20ef1c92d</code></td></tr>
+              <tr><th scope="row">Signing certificate SHA-256 fingerprint</th><td><code>c8f0f7ae7191dd17a9d6a763c7ff557d546d5dbac4b1d4ab2f63f487d19b1916</code></td></tr>
+              <tr><th scope="row">Status</th><td>Test candidate — awaiting device verification</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
 
       <div class="card" aria-labelledby="install">
         <h2 id="install">Installation instructions</h2>
         <ol>
-          <li>Tap <strong>Download APK</strong> above to download <strong>chronobible-1.1.0.apk</strong> to your Android device.</li>
+          <li>Tap <strong>Download v1.2.0 APK (test candidate)</strong> above to download <strong>chronobible-1.2.0.apk</strong> to your Android device (or download version 1.1.0 below).</li>
           <li>Open the downloaded file from your browser or file manager.</li>
           <li>If prompted, allow installation from this source (<em>Install unknown apps</em>). Install apps only from sources you trust.</li>
           <li>Tap <strong>Install</strong>. If ChronoBible is already installed, Android may update it in place.</li>
           <li>Open ChronoBible and begin your reading journey.</li>
         </ol>
-        <p class="btn-note">Optional: after downloading, you can verify the file using the checksum in <strong>Technical Release Details</strong> below.</p>
+        <p class="btn-note">Optional: after downloading, verify the file using the SHA-256 checksum shown in the Technical Release Details.</p>
+      </div>
+
+      <div class="card download-card" aria-labelledby="v110-title">
+        <h2 id="v110-title">Version 1.1.0 (existing release)</h2>
+        <p class="meta"><strong>Version 1.1.0</strong> · Version code <strong>10100</strong> · Android APK · <strong>6.28 MB</strong> (6,584,401 bytes)</p>
+        <p><a class="btn btn-secondary" href="./chronobible-1.1.0.apk" download="chronobible-1.1.0.apk">Download v1.1.0 APK</a></p>
+        <p class="btn-note">Direct download: <a href="./chronobible-1.1.0.apk" download="chronobible-1.1.0.apk">chronobible-1.1.0.apk</a></p>
       </div>
 
       <details class="tech-details">
-        <summary>Technical Release Details</summary>
+        <summary>Technical Release Details — Version 1.1.0</summary>
         <div class="tech-body">
-          <p class="tech-intro">Verification information for the distributed Android release. These details help confirm you have the authentic APK.</p>
+          <p class="tech-intro">Verification information for the existing v1.1.0 Android release.</p>
           <table>
             <tbody>
               <tr><th scope="row">Application package ID</th><td><code>com.cronobible.app</code></td></tr>
+              <tr><th scope="row">Version</th><td><code>1.1.0</code></td></tr>
               <tr><th scope="row">Version code</th><td><code>10100</code></td></tr>
               <tr><th scope="row">APK filename</th><td><code>chronobible-1.1.0.apk</code></td></tr>
+              <tr><th scope="row">File size</th><td>6,584,401 bytes (6.28 MB)</td></tr>
               <tr><th scope="row">APK SHA-256 checksum</th><td><code>cccd95102b7b0f01084e1926a77451532cd455dd777e5a9d3fc90da7636328ce</code></td></tr>
               <tr><th scope="row">Signing certificate SHA-256 fingerprint</th><td><code>c8f0f7ae7191dd17a9d6a763c7ff557d546d5dbac4b1d4ab2f63f487d19b1916</code></td></tr>
               <tr><th scope="row">GitHub releases reference</th><td><a href="https://github.com/premierfoodprocessing/ChronoBible/releases">github.com/premierfoodprocessing/ChronoBible/releases</a></td></tr>
