@@ -23,11 +23,14 @@ jobs:
         run: |
           set -e
           rm -rf _public
-          mkdir -p _public/assets/illustrations _public/download
-          cp index.html atlas.css atlas.js timeline-data.js _public/
-          cp -R assets/illustrations/. _public/assets/illustrations/
-          cp -R download/. _public/download/
-          touch _public/.nojekyll
+          mkdir -p _public
+          cp index.html atlas.css atlas.js timeline-data.js .nojekyll _public/ 2>/dev/null || true
+          [ -f 404.html ] && cp 404.html _public/ || true
+          cp -R assets _public/
+          cp -R download _public/
+          [ -d report ] && cp -R report _public/ || true
+          [ -d app ] && cp -R app _public/ || true
+          # Root CNAME handled by GitHub Pages settings/custom domain; do not invent.
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

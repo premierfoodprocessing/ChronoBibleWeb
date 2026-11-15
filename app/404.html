@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="description" content="Chronological Bible reading planner — read Scripture in historical order" />
+    <title>ChronoBible Reading Plan</title>
+    <script>
+      (function () {
+        try {
+          var raw = localStorage.getItem('cronobible:theme');
+          var value = raw ? String(raw).toLowerCase() : 'system';
+          var pref = (value === 'light' || value === 'dark' || value === 'system') ? value
+            : (value === 'dark-blue' || value === 'darkblue' || value === 'dark blue' || value === 'light-blue' || value === 'lightblue' || value === 'light blue') ? 'light-blue'
+            : (value === 'light-green' || value === 'lightgreen' || value === 'light green') ? 'light-green'
+            : (value === 'light-purple' || value === 'lightpurple' || value === 'light purple') ? 'light-purple'
+            : (value === 'yellow' || value === 'warm') ? 'yellow'
+            : 'system';
+          var effective = pref === 'system'
+            ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+            : pref;
+          var lightEffective = { light: 1, 'light-blue': 1, 'light-green': 1, 'light-purple': 1, yellow: 1 };
+          var root = document.documentElement;
+          root.dataset.theme = effective;
+          root.classList.remove('light', 'dark', 'theme-dark-blue', 'theme-light-blue', 'theme-light-green', 'theme-light-purple', 'theme-yellow');
+          root.classList.add(lightEffective[effective] ? 'light' : 'dark');
+          if (effective !== 'light' && effective !== 'dark') root.classList.add('theme-' + effective);
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/app/assets/index-CvXqYgnl.js"></script>
+    <link rel="stylesheet" crossorigin href="/app/assets/index-CeUYNPfv.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
