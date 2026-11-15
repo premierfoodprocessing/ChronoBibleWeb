@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Report a problem, suggest an improvement, or send feedback for ChronoBible." />
+  <title>Report a Problem or Send Feedback — ChronoBible</title>
+  <link rel="stylesheet" href="../atlas.css" />
+  <style>
+    .report-wrap { max-width: 900px; margin: 0 auto; padding: 24px var(--page-gutter, 20px) 48px; }
+    .report-card { background: rgba(251,246,235,0.9); border: 1px solid var(--border-strong, rgba(90,62,34,.38)); border-radius: 12px; padding: 20px 22px; margin: 16px 0; box-shadow: 0 6px 18px rgba(43,33,24,0.05); }
+    .report-card h2 { margin: 0 0 8px; font-size: 1.25rem; }
+    .report-actions { display: grid; gap: 12px; margin-top: 12px; }
+    .report-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 18px; border-radius: 8px; font-weight: 700; text-decoration: none; border: 1px solid #241b13; background: var(--deep-brown, #3a2b1e); color: var(--ivory, #fbf6eb); cursor: pointer; font: inherit; }
+    .report-btn:hover { background: #241b13; color: #fff; }
+    .report-btn.secondary { background: transparent; color: var(--deep-brown, #3a2b1e); border-color: var(--border-strong, rgba(90,62,34,.38)); }
+    .report-btn.secondary:hover { background: rgba(58,43,30,0.06); color: var(--ink, #2b2118); }
+    .report-note { color: var(--muted, #695744); font-size: .95rem; margin: 8px 0 0; }
+    .report-warn { border-left: 4px solid var(--bronze, #8a6744); padding: 10px 12px; background: rgba(138,103,36,0.08); border-radius: 6px; margin: 12px 0; }
+    .status { margin-top: 10px; font-size: .95rem; }
+    .status.pending { color: var(--muted, #695744); }
+    .status.ok { color: #2f4a3a; }
+    .surface-grid { display: grid; gap: 16px; }
+    @media (min-width: 760px) { .surface-grid { grid-template-columns: repeat(3, 1fr); } .report-actions { grid-template-columns: 1fr; } }
+    .pill { display:inline-block; font-size:.82rem; font-weight:700; color:#2f4a3a; background:rgba(47,74,58,.12); border:1px solid rgba(47,74,58,.28); border-radius:999px; padding:4px 10px; margin-bottom:8px; }
+    .muted-link { color: var(--ink-soft, #4a3b2d); }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#report-main">Skip to report options</a>
+  <header class="site-header">
+    <div class="masthead">
+      <a class="brand" href="../">CHRONOBIBLE</a>
+      <a class="story-mark" href="../#timeline">THE BIBLICAL STORY</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../#about">ABOUT</a>
+        <a href="../download/">DOWNLOAD ANDROID</a>
+        <a href="./" aria-current="page">FEEDBACK</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="report-main" class="report-wrap">
+    <p class="section-kicker">Central reporting (pilot)</p>
+    <h1>Report a Problem, Suggest an Improvement, or Send Feedback</h1>
+    <p class="lead" style="max-width:70ch;color:var(--ink-soft,#4a3b2d);">Help improve ChronoBible. Use the option that matches where you are using ChronoBible. No GitHub account is needed.</p>
+
+    <div class="report-card">
+      <div class="report-warn">
+        <strong>Privacy &amp; safety:</strong> do not include passwords, access tokens, OTPs, payment details, or unnecessary personal information. Reports are reviewed before any issue is created.
+        <div id="security-note" class="report-note" style="margin-top:8px;"></div>
+      </div>
+      <p class="report-note"><strong>Internet required</strong> to submit a report. Submitting a report does not affect offline Bible reading in the app.</p>
+    </div>
+
+    <div id="config-status" class="report-card status pending" role="status" aria-live="polite"></div>
+
+    <section aria-label="Choose your ChronoBible surface">
+      <div class="surface-grid">
+        <div class="report-card" data-surface="browser">
+          <span class="pill">Browser App</span>
+          <h2>ChronoBible — Browser App</h2>
+          <p class="report-note">For the ChronoBible web reading app in your browser.</p>
+          <div class="report-actions" id="actions-browser"></div>
+        </div>
+        <div class="report-card" data-surface="android">
+          <span class="pill">Android App</span>
+          <h2>ChronoBible — Android App</h2>
+          <p class="report-note">For the ChronoBible Android (Cordova) app on your device.</p>
+          <div class="report-actions" id="actions-android"></div>
+        </div>
+        <div class="report-card" data-surface="website">
+          <span class="pill">Website</span>
+          <h2>ChronoBible — Website</h2>
+          <p class="report-note">For this introductory website, timeline/atlas, or download page.</p>
+          <div class="report-actions" id="actions-website"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="report-card">
+      <h2>What happens next</h2>
+      <p class="report-note">Reports go to a central PFP review queue (Google Form &amp; Sheet). They are triaged and, when appropriate, tracked as GitHub issues. Security vulnerabilities and sensitive information must not be submitted through this ordinary form and should not be disclosed publicly.</p>
+      <p class="report-note"><a class="muted-link" href="../">Return to ChronoBible home</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav aria-label="Footer">
+        <a href="../#timeline">Timeline</a>
+        <a href="../#about">About</a>
+        <a href="../download/">Download Android</a>
+        <a href="./">Feedback</a>
+        <a href="https://github.com/premierfoodprocessing/ChronoBible">GitHub</a>
+      </nav>
+      <p>ChronoBible — The Illustrated Biblical Historical Atlas. Approximate historical periods presented as guides for reading in order.</p>
+    </div>
+  </footer>
+
+  <script src="./config.js"></script>
+  <script>
+    (function () {
+      var cfg = window.CHRONOBIBLE_REPORT_CONFIG || {};
+      var status = document.getElementById('config-status');
+      var sec = document.getElementById('security-note');
+      if (sec && cfg.securityInfo) sec.textContent = cfg.securityInfo;
+
+      function isConfigured(url) {
+        return typeof url === 'string' && url.trim().length > 0 && /^https?:\/\//i.test(url.trim());
+      }
+
+      var surfaces = [
+        { key: 'browser', label: 'Browser App' },
+        { key: 'android', label: 'Android App' },
+        { key: 'website', label: 'Website' }
+      ];
+      var intents = [
+        { label: 'Report a Problem', note: 'Something not working as expected' },
+        { label: 'Suggest an Improvement', note: 'An idea to make it better' },
+        { label: 'Send Feedback', note: 'General comments' }
+      ];
+
+      var configuredCount = 0;
+      surfaces.forEach(function (s) {
+        var url = (cfg[s.key] || '').trim();
+        var container = document.getElementById('actions-' + s.key);
+        if (!container) return;
+        if (isConfigured(url)) {
+          configuredCount++;
+          intents.forEach(function (intent) {
+            var a = document.createElement('a');
+            a.className = 'report-btn' + (intent.label === 'Report a Problem' ? '' : ' secondary');
+            a.href = url;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.textContent = intent.label;
+            a.setAttribute('aria-label', intent.label + ' for ChronoBible ' + s.label);
+            container.appendChild(a);
+          });
+          var n = document.createElement('p');
+          n.className = 'report-note';
+          n.textContent = 'Opens the central reporting form for this surface (new tab).';
+          container.appendChild(n);
+        } else {
+          var p = document.createElement('p');
+          p.className = 'report-note';
+          p.innerHTML = '<strong>Reporting link not yet configured</strong> for this surface. No form will be opened. This will be activated when the central form URL is provided.';
+          container.appendChild(p);
+        }
+      });
+
+      if (configuredCount === 0) {
+        status.className = 'report-card status pending';
+        status.textContent = 'Reporting links are not yet configured. No fake or dead submission links are shown. Once the central Google Form (with prefilled surface links) is available, this page will open the correct form for each surface.';
+      } else if (configuredCount < surfaces.length) {
+        status.className = 'report-card status pending';
+        status.textContent = 'Some reporting links are configured. Surfaces without a configured link remain inactive until their central form URL is provided.';
+      } else {
+        status.className = 'report-card status ok';
+        status.textContent = 'Reporting links are configured. Choose your surface and action to open the central reporting form.';
+      }
+    })();
+  </script>
+</body>
+</html>
